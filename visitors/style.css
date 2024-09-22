@@ -1,0 +1,150 @@
+:root {
+    --primary-bg-color: #f0f0f0;
+    --primary-accent-color: #53bfdbf6;
+    --button-hover-color: #5385bb;
+    --error-color: #d74343e1;
+    --popup-bg-color: white;
+    --popup-shadow-color: rgba(0, 0, 0, 0.15);
+    --video-bg-color: #000;
+    --button-text-color: #fff;
+    --radius: 21px;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #b9c6ef, #fbd7f9);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+#mainPage, #callPopup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+}
+
+#mainPage {
+    min-height: 150px;
+}
+
+#callPopup {
+    min-height: 150px;
+    max-width: 600px;
+    padding: 20px;
+    width: 90%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+video {
+    border-radius: 25px;
+    background-color: var(--video-bg-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+#localVideo {
+    object-fit: cover;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    display: none;
+    z-index: 2;
+}
+
+#remoteVideo {
+    object-fit: cover;
+    width: 100%;
+    max-height: 70vh;
+    height: auto;
+    display: none;
+}
+
+#popupTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0px;
+}
+
+button {
+    padding: 12px 60px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--primary-accent-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+
+#endCallButton {
+    background-color: var(--error-color);
+}
+
+#endCallButton:hover {
+    background-color: #9f393e;
+}
+
+#endCallButton:active {
+    background-color: #9d3b3e;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    #mainPage, #callPopup {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    video {
+        max-width: 100%;
+    }
+
+    #localVideo {
+        width: 120px;
+        height: 80px;
+    }
+}

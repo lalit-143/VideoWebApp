@@ -1,0 +1,146 @@
+/* General layout */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #b9c6ef, #fbd7f9);
+  margin: 0;
+}
+
+h1, p {
+  text-align: center;
+  color: darkslategrey;
+}
+
+#landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#acceptButton {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 21px;
+  background-color: #69b197;
+  color: white;
+  margin: 10px;
+}
+
+#acceptButton:hover {
+  background-color: #57917c;
+}
+
+
+#declineButton {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 21px;
+  background-color: #b16969;
+  color: white;
+  margin: 10px;
+}
+
+#declineButton:hover {
+  background-color: #8e5353;
+}
+
+
+
+#endCallButton {
+  padding: 12px 60px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 21px;
+  background-color: #b65b5b;
+  color: white;
+  margin: 25px 10px;
+}
+
+#endCallButton:hover {
+  background-color: #8f4747;
+}
+
+
+/* Modal Popup */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #e7f1ff;
+  padding: 25px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+#callContainer {
+  max-width: 600px;
+  height: auto;
+}
+
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+}
+
+#visitorRemoteVideo {
+  width: 100%;
+  max-width: 600px;
+  max-height: 75vh;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#agentLocalVideoSmall {
+  object-fit: cover;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #agentLocalVideoSmall {
+      width: 100px;
+      height: 70px;
+  }
+}
+
+#callTimer {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}

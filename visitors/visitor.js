@@ -175,7 +175,7 @@ function startStreaming() {
             }
         };
 
-        mediaRecorder.start(100);
+        mediaRecorder.start(500);
     } else {
         console.error('Checkpoint V16: Local stream not available');
     }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent - Video Call</title>
+    <link rel="stylesheet" href="agent.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agent Dashboard</h1>
+        <p>Waiting for calls...</p>
+    </div>
+
+    <div id="callModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalText">Incoming Call</h2>
+            <video id="localVideo" autoplay muted></video>
+            <video id="remoteVideo" autoplay></video>
+            <div>
+                <button id="acceptCallButton">Accept Call</button>
+                <button id="declineCallButton">Decline Call</button>
+                <button id="endCallButton" style="display: none;">End Call</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="agent.js"></script>
+</body>
+</html>
